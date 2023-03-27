@@ -4,12 +4,52 @@
 <title>Evan Burton</title>
 
 <style>
+        path {
+        transform-origin: 50% 0%;
+      }
+      .background--custom {
+        background-color: #FFFFFF;
+        position: absolute;
+        width: 100vw;
+        height: 120vh;
+        z-index: -1;
+        top: 0;
+        left: 0;
+      }
+      @keyframes path0 {
+        0% {
+          transform: rotate(-10deg);
+        }
+        100% {
+          transform: rotate(10deg);
+        }
+      }
+      @keyframes path1 {
+        0% {
+          transform: rotate(-30deg);
+        }
+        100% {
+          transform: rotate(30deg);
+        }
+      }
+      @keyframes path2 {
+        0% {
+          transform: rotate(40deg);
+        }
+        100% {
+          transform: rotate(-40deg);
+        }
+      }
   body {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #55423d;
     display: flex;
     justify-content: center;
+    Font-Family: 'Source Sans Pro', Sans-Serif;
+    Font-Size: 16px;
+
+
   }
   .name{
     color:#fffffe;
@@ -37,6 +77,8 @@
     width: 128px;
     height: 128px;
     border-radius: 128px;
+    z-index:-1;
+    position: relative;
   }
   .banner {
     display: flex;
@@ -60,10 +102,15 @@
     justify-content: space-around;
   }
 </style>
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro" rel="stylesheet">
+
 </head>
 
 <body>
-
+  <svg class="background--custom" id="demo" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path fill="#FFFF00" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z" style="animation: path0 5s linear infinite alternate;" /><path fill="#00FFFF" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z" style="animation: path1 12.5s linear infinite alternate;" /><path fill="#FF00FF" fill-opacity="0.2" d="M-100 -100L200 -100L200 20L-100 20Z" style="animation: path2 30s linear infinite alternate;" />
+  </svg>
 
 <div class="items">
 <div class="banner">
